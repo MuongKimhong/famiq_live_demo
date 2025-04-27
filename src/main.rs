@@ -57,30 +57,23 @@ fn setup_ui(mut fa_query: FaQuery, mut famiq_res: ResMut<FamiqResource>) {
             button!(text: "Decrease", id: "#decrease", class: "warning-dark ml-2")
         ]
     );
-    scroll!(
-        class: "mx-auto my-auto",
-        height: "400px",
-        width: "800px",
+    container!(
+        id: "#container",
+        class: "mx-auto my-auto py-10",
         children: [
-            container!(
-                id: "#container",
-                class: "mx-auto my-auto py-10",
-                children: [
-                    logo_container,
-                    text!(text: "Welcome to Bevy + Famiq\n What you see are not HTML!", class: "h3 mt-2"),
+            logo_container,
+            text!(text: "Welcome to Bevy + Famiq\n What you see are not HTML!", class: "h3 mt-2"),
 
-                    circular!(color: "cyan", size: 50.0, class: "mt-2"),
+            circular!(color: "cyan", size: 50.0, class: "mt-2"),
 
-                    select_container,
-                    input_container,
+            select_container,
+            input_container,
 
-                    text!(text: "Counter: $[counter]", class: "h3 mt-2"),
-                    counter_buttons,
+            text!(text: "Counter: $[counter]", class: "h3 mt-2"),
+            counter_buttons,
 
-                    button!(text: "show modal", class: "large mt-3", id: "#show-modal"),
-                    text!(text: "modal state $[show_modal]")
-                ]
-            )
+            button!(text: "show modal", class: "large mt-3", id: "#show-modal"),
+            text!(text: "modal state $[show_modal]")
         ]
     );
     setup_modal();
