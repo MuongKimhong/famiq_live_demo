@@ -1,7 +1,7 @@
 use super::*;
 
 pub fn setup_modal(){
-    modal!(
+    dialog!(
         model: "show_modal",
         children: [
             container!(

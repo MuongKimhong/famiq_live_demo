@@ -2,8 +2,7 @@
   "#container": {
     "width": "800px",
     "justify_content": "center",
-    "align_items": "center",
-    "background_color": "srgba 0.0, 0.0, 1.0, 0.1"
+    "align_items": "center"
   },
   "#modal-container": {
     "justify_content": "center",
